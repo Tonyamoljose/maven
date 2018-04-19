@@ -10,7 +10,18 @@
   <name>Parent</name>
   <description>Just a pom that makes it easy to build both projects at the same time.</description>
 
-  <modules>
+    <distributionManagement>
+    <snapshotRepository>
+         <id>nexus</id>
+         <url>http://52.173.28.7:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+               <repository>
+         <id>nexus</id>
+         <url>http://52.173.28.7:8081/repository/maven-releases/</url>
+               </repository>
+  </distributionManagement>
+
+         <modules>
     <module>multi-module</module>
     <module>single-module</module>
   </modules>
